@@ -1,21 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import store from './store';
+
+import STORE from './store';
 import List from './List';
 import './App.css';
 
-function App() {
+export default function App() {
   //for each list in store.list we need to generate a 
   //list of cards from store.list.cardIds
   // const html = [];
   // store.list.forEach(element => {
+    //console.log(store.lists.length);
+  let holdList = STORE.lists
+  console.log(holdList);
   let arrayList = [];
- for (i = 0; i < store.lists.length; i++) {
+ for (let i = 0; i < STORE.lists.length; i++) {
   let myList = [];
-  let list = store.lists[i]
-   for (e = 0; e < list.cardIds.length; e++){
+  let list = STORE.lists[i]
+   for (let e = 0; e < list.cardIds.length; e++){
     let cardId = list.cardIds[e];
-    myList.push(store.allCards[cardId]);
+    myList.push(STORE.allCards[cardId]);
    }
   
     // <List />
@@ -35,5 +38,5 @@ function App() {
     </main>
   );
 }
+}
 
-export default App;
