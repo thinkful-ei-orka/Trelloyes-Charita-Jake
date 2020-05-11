@@ -1,6 +1,7 @@
 import React from 'react';
+import './card.css';
 
-function Cards (props) {
+export default function Cards (props) {
     return (
         <div className="Card">
             <button type="button">delete</button>
@@ -10,7 +11,4 @@ function Cards (props) {
     );
 }
 
-export default {
-Cards
-};
 
